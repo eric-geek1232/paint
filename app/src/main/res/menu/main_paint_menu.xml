@@ -1,4 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/eraser"
+        android:title="Eraser"
+        app:showAsAction="always"
+        android:contentDescription="eraserSettings"
+        android:icon="@drawable/eraser_white"/>
+
+    <item
+        android:id="@+id/brush"
+        android:title="brush"
+        app:showAsAction="always"
+        android:contentDescription="pencilSettings"
+        android:icon="@drawable/ic_brush_black_24dp"/>
+
+    <item
+        android:id="@+id/colors"
+        android:title="Colors"
+        app:showAsAction="always"
+        android:contentDescription="colorsSettings"
+        android:icon="@drawable/ic_palette_black_24dp"/>
+
+    <item
+        android:id="@+id/clear_all"
+        android:title="DeleteAll"
+        app:showAsAction="always"
+        android:contentDescription="Delete"
+        android:icon="@drawable/ic_stay_white_screen_24dp"/>
 
 </menu>

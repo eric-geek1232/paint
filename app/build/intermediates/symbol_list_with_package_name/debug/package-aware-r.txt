@@ -659,8 +659,12 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable eraser_white
+drawable ic_brush_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_palette_black_24dp
+drawable ic_stay_white_screen_24dp
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -741,13 +745,16 @@ id barrier
 id beginning
 id blocking
 id bottom
+id brush
 id buttonPanel
 id center_vertical
 id chains
 id checkbox
 id checked
 id chronometer
+id clear_all
 id collapseActionView
+id colors
 id content
 id contentPanel
 id custom
@@ -760,6 +767,7 @@ id direct
 id disableHome
 id edit_query
 id end
+id eraser
 id expand_activities_button
 id expanded_menu
 id forever

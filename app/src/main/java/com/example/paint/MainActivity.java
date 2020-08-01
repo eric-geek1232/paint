@@ -1,5 +1,6 @@
 package com.example.paint;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -10,6 +11,8 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -18,14 +21,43 @@ import android.widget.Toast;
 import android.widget.LinearLayout.LayoutParams;
 
 public class MainActivity extends AppCompatActivity {
+    private DrawView drawView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        DrawView drawView = new DrawView(this);
-        setContentView(drawView);
+        this.drawView = new DrawView(this);
+        setContentView(this.drawView);
 
-        this.addContentView(drawView.row, drawView.params);
+        //this.addContentView(this.drawView.row, this.drawView.params);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_paint_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.clear_all:
+                this.drawView.setClean();
+                break;
+
+            case R.id.colors:
+
+                break;
+
+            case R.id.brush:
+                this.drawView.setPencil();
+                break;
+
+            case R.id.eraser:
+                this.drawView.setEraser();
+                break;
+        }
+        return true;
     }
 
     public class DrawView extends View {
@@ -55,9 +87,9 @@ public class MainActivity extends AppCompatActivity {
             this.bitMapPaint = new Paint();
             this.createBrush();
 
-            this.createButtons(context);
-            this.createEraser(context);
-            this.createClear(context);
+            //this.createButtons(context);
+            // sentence creates tree buttons when are call them in the constructor they active onClickEvents
+
 
             this.setBackgroundColor(Color.WHITE);
         }
